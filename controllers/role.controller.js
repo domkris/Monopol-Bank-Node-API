@@ -1,4 +1,10 @@
-import { createRole, deleteRole, findAllRoles, findRole, updateRole } from '../services/role.services.js'
+import {
+  createRole,
+  deleteRole,
+  findAllRoles,
+  findRole,
+  updateRole
+} from '../services/role.service.js'
 import logger from '../utils/logger.utils.js'
 
 export async function createRoleController (req, res) {

@@ -7,7 +7,7 @@ import {
   findAllUsers,
   findUser,
   updateUser
-} from '../services/user.services.js'
+} from '../services/user.service.js'
 
 dotenvExpand.expand(dotenv.config())
 

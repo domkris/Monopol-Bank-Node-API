@@ -6,23 +6,22 @@ import {
   updateRoleController,
   deleteRoleController
 } from '../controllers/role.controller.js'
-import isUserAuthenticated from '../middlewares/user.middleware.js'
 
 const router = express.Router()
 
 // get all roles
-router.get('/', isUserAuthenticated, getAllRolesController)
+router.get('/', getAllRolesController)
 
 // get roles by id
-router.get('/:id', isUserAuthenticated, getRoleByIdController)
+router.get('/:id', getRoleByIdController)
 
 // post - register a new role
-router.post('/', isUserAuthenticated, createRoleController)
+router.post('/', createRoleController)
 
 // patch - update a role
-router.patch('/:id', isUserAuthenticated, updateRoleController)
+router.patch('/:id', updateRoleController)
 
 // delete a role
-router.delete('/:id', isUserAuthenticated, deleteRoleController)
+router.delete('/:id', deleteRoleController)
 
 export { router as roleRouter }
