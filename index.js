@@ -17,6 +17,10 @@ app.use(cors())
 app.use('/roles', roleRouter)
 app.use('/users', userRouter)
 
+app.get('/chat_test', (req, res) => {
+  res.sendFile('chat_test.html', { root: '.' })
+})
+
 app.use('/', (req, res, next) => {
   const error = new Error(LOG_ERRORS.NOT_FOUND)
   logger.error(error)

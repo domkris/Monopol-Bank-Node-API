@@ -28,7 +28,8 @@
     "mongoose-id-validator": "^0.6.0",
     "nodemon": "^2.0.19",
     "pino": "^8.4.2",
-    "pino-pretty": "^9.0.1"
+    "pino-pretty": "^9.0.1",
+    "socket.io": "^4.5.1"
   },
   "devDependencies": {
     "eslint": "^8.22.0",
