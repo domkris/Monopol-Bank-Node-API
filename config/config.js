@@ -12,6 +12,9 @@ export const MODELS = {
   ROLE: 'Role',
   USER: 'User'
 }
+export const PASSWORD = {
+  MIN_LENGTH: 8
+}
 export const PORT = 4001
 export const REGEX = {
   EMAIL_VALID_MATCH: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
@@ -21,6 +24,10 @@ export const ROLES = {
   ADMIN: 1,
   BASIC: 2,
   GUEST: 3
+}
+export const USERNAME = {
+  MIN_LENGTH: 3,
+  MAX_LENGTH: 300
 }
 export const VALIDATIONS = {
   CANNOT_BE_EMPTY: '{PATH} cannot be empty'
