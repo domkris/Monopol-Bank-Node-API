@@ -10,6 +10,7 @@ import http from 'http'
 
 const app = express()
 const server = http.createServer(app)
+const port = process.env.PORT || PORT
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -31,8 +32,8 @@ app.use('/', (req, res, next) => {
   next()
 })
 
-server.listen(PORT, () => {
-  logger.info(`Server running on port: ${PORT}`)
+server.listen(port, () => {
+  logger.info(`Server running on port: ${port}`)
   connectToMongoAtlasDB()
   setUpSocketIO(server)
 })
