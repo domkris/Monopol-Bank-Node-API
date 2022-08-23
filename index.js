@@ -5,8 +5,12 @@ import { roleRouter } from './routes/role.route.js'
 import { userRouter } from './routes/user.route.js'
 import connectToMongoAtlasDB from './utils/dbConnection.utils.js'
 import logger from './utils/logger.utils.js'
+import setUpSocketIO from './utils/socket.utils.js'
+import http from 'http'
 
 const app = express()
+const server = http.createServer(app)
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
@@ -24,11 +28,11 @@ app.get('/chat_test', (req, res) => {
 app.use('/', (req, res, next) => {
   const error = new Error(LOG_ERRORS.NOT_FOUND)
   logger.error(error)
-  res.send(404).json(error)
   next()
 })
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   logger.info(`Server running on port: ${PORT}`)
   connectToMongoAtlasDB()
+  setUpSocketIO(server)
 })

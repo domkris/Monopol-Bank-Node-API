@@ -6,7 +6,8 @@ export const LOG_ERRORS = {
   DB_ERROR: 'Error: DB error',
   AUTH_FAILED: 'Error: Not authenticated',
   INVALID_URL: 'Error: Invalid Url',
-  SERVER_ERROR: 'Error, server error'
+  SERVER_ERROR: 'Error: Server error',
+  SOCKETIO_ERROR: 'Error: SocketIO error'
 }
 export const MODELS = {
   ROLE: 'Role',
