@@ -1,3 +1,4 @@
+export const BOT_NAME = 'MONOPOL-BANK BOT'
 export const LOG_INFO = {
   DB_CONNECTED: 'Database successfully connected'
 }
